@@ -1,25 +1,26 @@
 from src.wineQ.config.configuration import ConfigurationManager
-from src.wineQ.components.data_validation import DataValidation
+from src.wineQ.components.model_trainer import ModelTrainer
 from src.wineQ import logging
 
-STAGE_NAME = "Data Validation stage"
+
+STAGE_NAME = "Model Trainer stage"
 
 
-class DataValidationTrainingPipeline:
+class ModelTrainerTrainingPipeline:
     def __init__(self) -> None:
         pass
 
     def main(self):
         config = ConfigurationManager()
-        data_validation_config = config.get_data_validation_config()
-        data_validation = DataValidation(config=data_validation_config)
-        data_validation.validate_all_columns()
+        model_trainer_config = config.get_data_model_trainer_config()
+        model_trainer_config = ModelTrainer(config=model_trainer_config)
+        model_trainer_config.train()
 
 
 if __name__ == "__main__":
     try:
         logging.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-        obj = DataValidationTrainingPipeline()
+        obj = ModelTrainerTrainingPipeline()
         obj.main()
         logging.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 
