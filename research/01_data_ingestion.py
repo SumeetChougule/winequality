@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 os.chdir("../")
 
@@ -15,3 +16,8 @@ class DataIngestionConfig:
     source_url: str
     local_data_file: Path
     unzip_dir: Path
+
+
+dataset = pd.read_csv("../artifacts/data_ingestion/winequality-red.csv")
+
+dataset.info()
