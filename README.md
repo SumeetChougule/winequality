@@ -30,16 +30,16 @@ The machine learning model uses these input features to predict the quality of t
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+https://github.com/SumeetChougule/winequality.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n mlproj python=3.8 -y
+conda create -n envWQ python=3.11 -y
 ```
 
 ```bash
-conda activate mlproj
+conda activate envWQ
 ```
 
 
