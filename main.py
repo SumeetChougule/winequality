@@ -9,7 +9,7 @@ from src.wineQ.pipeline.stage_03_data_transformation import (
 
 from src.wineQ.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 
-# from src.wineQ.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+from src.wineQ.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 
 
 STAGE_NAME = "Data Ingestion stage"
@@ -50,6 +50,17 @@ try:
     obj.main()
     logging.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 
+except Exception as e:
+    logging.exception(e)
+    raise e
+
+STAGE_NAME = "Model Evaluation stage"
+
+try:
+    logging.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = ModelEvaluationTrainingPipeline()
+    obj.main()
+    logging.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
     logging.exception(e)
     raise e
