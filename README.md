@@ -14,12 +14,19 @@ Volatile Acidity: The amount of acetic acid in the wine, which can lead to an un
 Citric Acid: Found in small quantities, citric acid can add a refreshing taste to wines.
 
 Residual Sugar: The amount of sugar remaining after fermentation stops, influencing the sweetness of the wine.
+
 Chlorides: The amount of salt in the wine.
+
 Free Sulfur Dioxide: A form of sulfur dioxide that exists as a dissolved gas in the wine.
+
 Total Sulfur Dioxide: The total amount of sulfur dioxide in the wine, including both free and bound forms.
+
 Density: The density of the wine, which is close to that of water depending on the alcohol content.
+
 pH: Describes how acidic or basic the wine is on a scale from 0 to 14.
+
 Sulphates: Additives that contribute to sulfur dioxide gas (SO2) levels.
+
 Alcohol: The alcohol content of the wine.
 
 ## Model Prediction
